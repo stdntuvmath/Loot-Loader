@@ -75,6 +75,13 @@ The script produces:
 ![LootLoader Example Output](images/console1.JPG)
 
 
-These visualizations are intended to support **research and interpretation**, not automated decision-making.
+These visualizations embody automated decision-making. Stock groups are broken into groups of 85 because it takes ~30 mins to get through 85 stocks with the ping limitation set forth by Schwab at 240/min. 
+
+This system utilizes 9 instances of the same program to look at 765 stocks every 30 minutes. This is a first version of the program. The next version with include async practices and be reduced in size and iteration to accomplish the same task.
+
+The progress, displayed below, shows a the programs capability in a good stock market year. More testing is needed to see if the current indicator combination is a good fit or not.
+
+![LootLoader Example Output](images/TOS1.JPG)
+![LootLoader Example Output](images/CS1.JPG)
 
 ---
