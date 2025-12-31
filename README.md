@@ -79,7 +79,7 @@ These visualizations embody automated decision-making. Stock groups are broken i
 
 This system utilizes 9 instances of the same program to look at 765 stocks every 30 minutes. This is a first version of the program. The next version with include async practices and be reduced in size and iteration to accomplish the same task.
 
-The progress, displayed below, shows a the programs capability in a good stock market year. More testing is needed to see if the current indicator combination is a good fit or not.
+The progress, displayed below, is the schwab account on ThinkOrSwim as well as the portfolio performance which shows a the programs capability in a good stock market year. More testing is needed to see if the current indicator combination is a good fit or not. The 30% account performance was with one instance of the program (not all 9).
 
 ![LootLoader Example Output](images/TOS1.JPG)
 ![LootLoader Example Output](images/CS1.JPG)
