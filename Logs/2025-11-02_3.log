@@ -1,126 +1,0 @@
-[34m*******************[34m*******************Sunday - 2025-11-02 22:26:43.064854 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 69, in map_httpcore_exceptions
-    yield
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 233, in handle_request
-    resp = self._pool.handle_request(req)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
-    raise exc from None
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
-    response = connection.handle_request(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
-    return self._connection.handle_request(request)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\http11.py", line 143, in handle_request
-    raise exc
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\http11.py", line 113, in handle_request
-    ) = self._receive_response_headers(**kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\http11.py", line 186, in _receive_response_headers
-    event = self._receive_event(timeout=timeout)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\http11.py", line 238, in _receive_event
-    raise RemoteProtocolError(msg)
-httpcore.RemoteProtocolError: Server disconnected without sending a response.
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab_3.py", line 89, in Get_Account_Balance_Available_For_Trading
-    account = auth.get_account(accountHash)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\schwab\client\base.py", line 152, in get_account
-    return self._get_request(path, params)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\schwab\client\synchronous.py", line 19, in _get_request
-    resp = self.session.get(dest, params=params)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1054, in get
-    return self.request(
-           ^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\authlib\integrations\httpx_client\oauth2_client.py", line 206, in request
-    return super().request(
-           ^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 827, in request
-    return self.send(request, auth=auth, follow_redirects=follow_redirects)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 914, in send
-    response = self._send_handling_auth(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
-    response = self._send_handling_redirects(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
-    response = self._send_single_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1015, in _send_single_request
-    response = transport.handle_request(request)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 232, in handle_request
-    with map_httpcore_exceptions():
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
-    self.gen.throw(typ, value, traceback)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 86, in map_httpcore_exceptions
-    raise mapped_exc(message) from exc
-httpx.RemoteProtocolError: Server disconnected without sending a response.
-[34m*******************[34m*******************Sunday - 2025-11-02 22:26:43.070406 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab_3.py", line 4615, in Buy_without_LookingForBuy_Method
-    numberOfShares = Calculation_Management.Calculate_Share_Amount(closePrice, accountBalance)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab_3.py", line 1325, in Calculate_Share_Amount
-    coeffecient = accountBalance/buyPrice
-                  ~~~~~~~~~~~~~~^~~~~~~~~
-TypeError: unsupported operand type(s) for /: 'NoneType' and 'float'
-[34m-------------------[34m-------------------Sunday - 2025-11-02 22:26:44.550745 - INFO53 of 85. Backfilling from specified date 2025-10-24 - 19:01:00 for: ALL[34m-------------------[34m-------------------Sunday - 2025-11-02 22:26:59.392833 - INFO-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-22:26:59.392834 - BEGIN DATALOADER-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-[34m-------------------[34m-------------------Sunday - 2025-11-02 22:27:03.889324 - INFO1 of 85. Backfilling from specified date 2025-10-24 - 16:03:00 for: AIZ[34m*******************[34m*******************Sunday - 2025-11-02 22:27:11.513074 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab_3.py", line 5511, in Get_Historical_Minute_Data_from_Schwab
-    authorization = Authentication_Management.Schwab_Wrapper_Authentication.Get_Schwab_Account_Authorization()
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab_3.py", line 643, in Get_Schwab_Account_Authorization
-    authorization = schwab.auth.easy_client(appKey, secretKey,redirect_url, tokenPath)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\schwab\auth.py", line 687, in easy_client
-    c = client_from_login_flow(
-        ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\schwab\auth.py", line 325, in client_from_login_flow
-    with callback_server():
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 137, in __enter__
-    return next(self.gen)
-           ^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\schwab\auth.py", line 315, in callback_server
-    server.start()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\multiprocess\process.py", line 121, in start
-    self._popen = self._Popen(self)
-                  ^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\multiprocess\context.py", line 224, in _Popen
-    return _default_context.get_context().Process._Popen(process_obj)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\multiprocess\context.py", line 336, in _Popen
-    return Popen(process_obj)
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\multiprocess\popen_spawn_win32.py", line 46, in __init__
-    prep_data = spawn.get_preparation_data(process_obj._name)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\multiprocess\spawn.py", line 164, in get_preparation_data
-    _check_not_importing_main()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\multiprocess\spawn.py", line 140, in _check_not_importing_main
-    raise RuntimeError('''
-RuntimeError: 
-        An attempt has been made to start a new process before the
-        current process has finished its bootstrapping phase.
-
-        This probably means that you are not using fork to start your
-        child processes and you have forgotten to use the proper idiom
-        in the main module:
-
-            if __name__ == '__main__':
-                freeze_support()
-                ...
-
-        The "freeze_support()" line can be omitted if the program
-        is not going to be frozen to produce an executable.
-        
-        To fix this issue, refer to the "Safe importing of main module"
-        section in https://docs.python.org/3/library/multiprocessing.html
-        
-

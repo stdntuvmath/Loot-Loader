@@ -1,147 +1,0 @@
-[34m-------------------[34m-------------------Sunday - 2025-10-05 21:47:35.565454 - INFO-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-21:47:35.565454 - BEGIN DATALOADER-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-[34m-------------------[34m-------------------Sunday - 2025-10-05 21:47:35.777585 - INFO1 of 85. Backfilling from specified date 2025-09-30 - 14:42:00 for: AVDV[34m*******************[34m*******************Sunday - 2025-10-05 21:47:36.086811 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 5535, in Get_Historical_Minute_Data_from_Schwab
-    return json.dumps(priceHistory.json(), indent=4)
-                      ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 764, in json
-    return jsonlib.loads(self.content, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-[34m*******************[34m*******************Sunday - 2025-10-05 21:47:36.086811 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 5535, in Get_Historical_Minute_Data_from_Schwab
-    return json.dumps(priceHistory.json(), indent=4)
-                      ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 764, in json
-    return jsonlib.loads(self.content, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-[34m*******************[34m*******************Sunday - 2025-10-05 21:47:36.086811 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\DataLoader_Nights_Weekends2.py", line 466, in Run
-    minuteCandle_data = json.loads(str(lib.Pull_From_Schwab_Management.Get_Historical_Minute_Data_from_Schwab(symbol,start,tday)))
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-[34m-------------------[34m-------------------Sunday - 2025-10-05 21:47:44.042074 - INFO-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-21:47:44.042074 - BEGIN DATALOADER-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-[34m-------------------[34m-------------------Sunday - 2025-10-05 21:47:44.207294 - INFO1 of 85. Backfilling from specified date 2025-10-03 - 19:52:00 for: BAR[34m*******************[34m*******************Sunday - 2025-10-05 21:47:44.461298 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 5535, in Get_Historical_Minute_Data_from_Schwab
-    return json.dumps(priceHistory.json(), indent=4)
-                      ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 764, in json
-    return jsonlib.loads(self.content, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-[34m*******************[34m*******************Sunday - 2025-10-05 21:47:44.461298 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 5535, in Get_Historical_Minute_Data_from_Schwab
-    return json.dumps(priceHistory.json(), indent=4)
-                      ^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 764, in json
-    return jsonlib.loads(self.content, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-[34m*******************[34m*******************Sunday - 2025-10-05 21:47:44.461298 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\DataLoader_Nights_Weekends3.py", line 466, in Run
-    minuteCandle_data = json.loads(str(lib.Pull_From_Schwab_Management.Get_Historical_Minute_Data_from_Schwab(symbol,start,tday)))
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:22.755724 - INFO-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-21:48:22.755724 - BEGIN DATALOADER-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:22.955725 - INFO1 of 85. Backfilling from specified date 2025-09-30 - 14:42:00 for: AVDV[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:24.142997 - INFO1 of 85. Adding records for... AVDV[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:38.334805 - INFO-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-21:48:38.334805 - BEGIN DATALOADER-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:38.551022 - INFO1 of 85. Backfilling from specified date 2025-10-03 - 19:52:00 for: BAR[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:39.770157 - INFO1 of 85. Adding records for... BAR[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:40.209086 - INFO1 of 85. BAR - Backfilled to present.[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:40.255978 - INFOBAR Trade Status: (0, 0, 0, 0)[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:49.335403 - INFO1 of 85. AVDV - Backfilled to present.[34m-------------------[34m-------------------Sunday - 2025-10-05 21:48:49.382295 - INFOAVDV Trade Status: (0, 0, 0, 0)[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:24.188405 - INFO-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-21:50:24.188406 - BEGIN DATALOADER-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:24.384890 - INFO1 of 85. Backfilling from specified date 2025-10-03 - 16:00:00 for: AVDV[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:25.757969 - INFO1 of 85. Adding records for... AVDV[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:26.275374 - INFO1 of 85. AVDV - Backfilled to present.[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:26.380648 - INFONo records present. Adding fresh records...-----------------------------------------------------------------------------------[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:27.903782 - INFO2 of 85. Filling data for: AVDX[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:44.088927 - INFO-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-21:50:44.088928 - BEGIN DATALOADER-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:44.305143 - INFO1 of 85. Backfilling from specified date 2025-10-03 - 19:52:00 for: BAR[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:45.493040 - INFO1 of 85. Adding records for... BAR[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:45.921050 - INFO1 of 85. BAR - Backfilled to present.[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:46.017234 - INFONo records present. Adding fresh records...-----------------------------------------------------------------------------------[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:47.089201 - INFO2 of 85. Filling data for: BARK[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:47.205125 - INFO2 of 85. BARK - Backfilled to present with None records stored.[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:47.321047 - INFONo records present. Adding fresh records...-----------------------------------------------------------------------------------[34m-------------------[34m-------------------Sunday - 2025-10-05 21:50:48.500465 - INFO3 of 85. Filling data for: BASE[34m-------------------[34m-------------------Sunday - 2025-10-05 21:52:07.884281 - INFO3 of 85. BASE - Backfilled to present with None records stored.[34m-------------------[34m-------------------Sunday - 2025-10-05 21:52:08.116127 - INFONo records present. Adding fresh records...-----------------------------------------------------------------------------------[34m-------------------[34m-------------------Sunday - 2025-10-05 21:52:09.921381 - INFO4 of 85. Filling data for: BAX[34m*******************[34m*******************Sunday - 2025-10-05 21:52:17.142477 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
-    self._cmysql.connect(**cnx_kwargs)
-_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3306' (10048)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1542, in Create_My_Connection
-    mydb = mysql.connector.connect(
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
-    return CMySQLConnection(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
-    self.connect(**kwargs)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
-    self._open_connection()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
-    raise get_mysql_exception(
-mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10048)
-[34m*******************[34m*******************Sunday - 2025-10-05 21:52:17.142477 - ERROR - Traceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\DataLoader_Nights_Weekends2.py", line 382, in Run
-    lib.Database_Management.Give_Data_To_LootLoaderDataBase.Give_HistoricalData_To_DB(symbol, charlesSchwabDate, charlesSchwabTime,
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 2971, in Give_HistoricalData_To_DB
-    mycursor = connection.cursor()
-               ^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'cursor'
- - END PROGRAM-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-[34m*******************[34m*******************Sunday - 2025-10-05 21:52:17.512027 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
-    self._cmysql.connect(**cnx_kwargs)
-_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3306' (10048)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1542, in Create_My_Connection
-    mydb = mysql.connector.connect(
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
-    return CMySQLConnection(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
-    self.connect(**kwargs)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
-    self._open_connection()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
-    raise get_mysql_exception(
-mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10048)
-[34m*******************[34m*******************Sunday - 2025-10-05 21:52:17.512027 - ERROR - Traceback (most recent call last):
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\DataLoader_Nights_Weekends3.py", line 382, in Run
-    lib.Database_Management.Give_Data_To_LootLoaderDataBase.Give_HistoricalData_To_DB(symbol, charlesSchwabDate, charlesSchwabTime,
-  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 2971, in Give_HistoricalData_To_DB
-    mycursor = connection.cursor()
-               ^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'cursor'
- - END PROGRAM-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-

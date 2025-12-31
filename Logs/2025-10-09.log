@@ -1,273 +1,0 @@
-[34m*******************[34m*******************Thursday - 2025-10-09 12:32:43.090167 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
-    self._cmysql.connect(**cnx_kwargs)
-_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3306' (10061)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1542, in Create_My_Connection
-    mydb = mysql.connector.connect(
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
-    return CMySQLConnection(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
-    self.connect(**kwargs)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
-    self._open_connection()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
-    raise get_mysql_exception(
-mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
-[34m*******************[34m*******************Thursday - 2025-10-09 12:32:43.091167 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 2199, in Get_Symbol_List
-    mycursor = connection.cursor()
-               ^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'cursor'
-[34m*******************[34m*******************Thursday - 2025-10-09 12:32:43.092170 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 2230, in Get_Sectioned_Symbol_List_85
-    for symbol in entireSymbolList:
-TypeError: 'NoneType' object is not iterable
-[34m*******************[34m*******************Thursday - 2025-10-09 12:37:20.731461 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
-    self._cmysql.connect(**cnx_kwargs)
-_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3306' (10061)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1542, in Create_My_Connection
-    mydb = mysql.connector.connect(
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
-    return CMySQLConnection(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
-    self.connect(**kwargs)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
-    self._open_connection()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
-    raise get_mysql_exception(
-mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
-[34m*******************[34m*******************Thursday - 2025-10-09 12:37:20.731461 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 2199, in Get_Symbol_List
-    mycursor = connection.cursor()
-               ^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'cursor'
-[34m*******************[34m*******************Thursday - 2025-10-09 12:37:20.731461 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 2230, in Get_Sectioned_Symbol_List_85
-    for symbol in entireSymbolList:
-TypeError: 'NoneType' object is not iterable
-[34m*******************[34m*******************Thursday - 2025-10-09 12:37:59.755230 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
-    self._cmysql.connect(**cnx_kwargs)
-_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3306' (10061)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1542, in Create_My_Connection
-    mydb = mysql.connector.connect(
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
-    return CMySQLConnection(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
-    self.connect(**kwargs)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
-    self._open_connection()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
-    raise get_mysql_exception(
-mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
-[34m*******************[34m*******************Thursday - 2025-10-09 12:37:59.755230 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 2199, in Get_Symbol_List
-    mycursor = connection.cursor()
-               ^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'cursor'
-[34m*******************[34m*******************Thursday - 2025-10-09 12:37:59.767553 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 2230, in Get_Sectioned_Symbol_List_85
-    for symbol in entireSymbolList:
-TypeError: 'NoneType' object is not iterable
-[34m*******************[34m*******************Thursday - 2025-10-09 13:10:16.193544 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
-    self._cmysql.connect(**cnx_kwargs)
-_mysql_connector.MySQLInterfaceError: Unknown database 'lootloaderdatabase'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1542, in Create_My_Connection
-    mydb = mysql.connector.connect(
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
-    return CMySQLConnection(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
-    self.connect(**kwargs)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
-    self._open_connection()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
-    raise get_mysql_exception(
-mysql.connector.errors.ProgrammingError: 1049 (42000): Unknown database 'lootloaderdatabase'
-[34m*******************[34m*******************Thursday - 2025-10-09 13:10:16.193544 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1626, in Create_LootLoaderDatabase_and_All_Necessary_Tables
-    mycursor = connection.cursor()
-               ^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'cursor'
-[34m*******************[34m*******************Thursday - 2025-10-09 13:12:06.848850 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 327, in execute
-    raise ProgrammingError
-mysql.connector.errors.ProgrammingError: Unknown error
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1718, in Create_Symbol_Table_for_All_Symbols
-    mycursor.execute('INSERT INTO symbols(symbol) VALUES (\'{}\');'.format(symbol))
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 329, in execute
-    raise ProgrammingError("Cursor is not connected", 2055) from err
-mysql.connector.errors.ProgrammingError: 2055: Cursor is not connected
-[34m*******************[34m*******************Thursday - 2025-10-09 13:12:06.879896 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1752, in Create_Historical_Tables_ForAll_Symbols
-    time.sleep(1)
-    ^^^^
-NameError: name 'time' is not defined
-[34m*******************[34m*******************Thursday - 2025-10-09 13:12:06.880896 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1639, in Create_LootLoaderDatabase_and_All_Necessary_Tables
-    Database_Management.Create_Delete_Tables.Create_Tables().Create_TradingTables_for_All_Symbols()
-TypeError: Database_Management.Create_Delete_Tables.Create_Tables.Create_TradingTables_for_All_Symbols() takes 0 positional arguments but 1 was given
-[34m*******************[34m*******************Thursday - 2025-10-09 13:15:22.136891 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1752, in Create_Historical_Tables_ForAll_Symbols
-    time.sleep(1)
-    ^^^^
-NameError: name 'time' is not defined
-[34m*******************[34m*******************Thursday - 2025-10-09 13:17:53.997072 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3124, in Check_If_Table_Exists_in_LLDB
-    connection = Database_Management.Create_My_Connection()
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1542, in Create_My_Connection
-    mydb = mysql.connector.connect(
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
-    return CMySQLConnection(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
-    self.connect(**kwargs)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
-    self._open_connection()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
-    self._cmysql.connect(**cnx_kwargs)
-KeyboardInterrupt
-[34m*******************[34m*******************Thursday - 2025-10-09 13:17:54.496250 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3124, in Check_If_Table_Exists_in_LLDB
-    connection = Database_Management.Create_My_Connection()
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1542, in Create_My_Connection
-    mydb = mysql.connector.connect(
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
-    return CMySQLConnection(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
-    self.connect(**kwargs)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
-    self._open_connection()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
-    self._cmysql.connect(**cnx_kwargs)
-KeyboardInterrupt
-[34m*******************[34m*******************Thursday - 2025-10-09 13:17:54.527275 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1956, in Create_TradingTables_for_All_Symbols
-    mycursor.execute('CREATE TABLE {}_Trading(Symbol nchar(4), nDate date, nTime time(0), accountBalance float, lookingForBuy int, AlreadyBought int, lookingForSell int, AlreadySold int,  orderType nchar(4), ClosePrice float, numberOfShares int, Risk float, Profit_Loss float, ROI float, incomeTaxesDue float, buyPrice float, sellPrice float, Good_Bad_Trade nchar(4), order_ID nchar(60), rowID int);'.format(symbol))
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
-    result = self._connection.cmd_query(
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
-    return method(cnx, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
-    self._cmysql.query(
-KeyboardInterrupt
-[34m*******************[34m*******************Thursday - 2025-10-09 13:28:27.108853 - ERRORstuff[34m*******************[34m*******************Thursday - 2025-10-09 14:08:53.951518 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1752, in Create_Historical_Tables_ForAll_Symbols
-    time.sleep(1)
-    ^^^^
-NameError: name 'time' is not defined
-[34m*******************[34m*******************Thursday - 2025-10-09 14:09:44.403559 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1752, in Create_Historical_Tables_ForAll_Symbols
-    time.sleep(1)
-    ^^^^
-NameError: name 'time' is not defined
-[34m*******************[34m*******************Thursday - 2025-10-09 14:10:51.148308 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1752, in Create_Historical_Tables_ForAll_Symbols
-    time.sleep(1)
-    ^^^^
-NameError: name 'time' is not defined
-[34m*******************[34m*******************Thursday - 2025-10-09 14:12:00.414054 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1752, in Create_Historical_Tables_ForAll_Symbols
-    time.sleep(1)
-    ^^^^
-NameError: name 'time' is not defined
-[34m*******************[34m*******************Thursday - 2025-10-09 20:40:30.455679 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
-    self._cmysql.connect(**cnx_kwargs)
-_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3306' (10061)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1542, in Create_My_Connection
-    mydb = mysql.connector.connect(
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
-    return CMySQLConnection(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
-    self.connect(**kwargs)
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
-    self._open_connection()
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
-    raise get_mysql_exception(
-mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
-[34m*******************[34m*******************Thursday - 2025-10-09 20:40:30.483967 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1654, in Create_Symbol_Table_for_All_Symbols
-    mycursor = connection.cursor()
-               ^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'cursor'
-[34m*******************[34m*******************Thursday - 2025-10-09 20:50:15.888906 - ERRORTraceback (most recent call last):
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 327, in execute
-    raise ProgrammingError
-mysql.connector.errors.ProgrammingError: Unknown error
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1714, in Create_Symbol_Table_for_All_Symbols
-    mycursor.execute('INSERT INTO symbols(symbol) VALUES (\'{}\');'.format(symbol))
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 329, in execute
-    raise ProgrammingError("Cursor is not connected", 2055) from err
-mysql.connector.errors.ProgrammingError: 2055: Cursor is not connected
-[34m*******************[34m*******************Thursday - 2025-10-09 21:01:12.929218 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1755, in Create_Historical_Tables_ForAll_Symbols
-    mycursor.execute('CREATE TABLE {}_Historical(Symbol nchar(4), nDate date, nTime time(0), ClosePrice float, HighPrice float, LowPrice float, Volume float, EMA200 float, EMA200Angle float, stdrdDev1 float, stdrdDev2 float, stdrdDev3 float, stdrdDev4 float, stdrdDev5 float, stdrdDev6 float, stdrdDev7 float, stdrdDev8 float, stdrdDev9 float, stdrdDev10 float, negstdrdDev1 float, negstdrdDev2 float, negstdrdDev3 float, negstdrdDev4 float, negstdrdDev5 float, negstdrdDev6 float, negstdrdDev7 float, negstdrdDev8 float, negstdrdDev9 float, negstdrdDev10 float, stdDev10Avg float, hlevOrigin float, ID int, hlevPercentage float, hlev2000_UpperArm  float, hlev2000_MiddleArm float, hlev2000_LowerArm float);'.format(symbol))
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
-    result = self._connection.cmd_query(
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
-    return method(cnx, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
-    self._cmysql.query(
-KeyboardInterrupt
-[34m*******************[34m*******************Thursday - 2025-10-09 21:03:23.058981 - ERRORTraceback (most recent call last):
-  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1952, in Create_TradingTables_for_All_Symbols
-    mycursor.execute('CREATE TABLE {}_Trading(Symbol nchar(4), nDate date, nTime time(0), accountBalance float, lookingForBuy int, AlreadyBought int, lookingForSell int, AlreadySold int,  orderType nchar(4), ClosePrice float, numberOfShares int, Risk float, Profit_Loss float, ROI float, incomeTaxesDue float, buyPrice float, sellPrice float, Good_Bad_Trade nchar(4), order_ID nchar(60), rowID int);'.format(symbol))
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
-    result = self._connection.cmd_query(
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
-    return method(cnx, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
-    self._cmysql.query(
-KeyboardInterrupt
-

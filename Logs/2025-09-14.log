@@ -1,6 +1,0 @@
-[34m*******************[34m*******************Sunday - 2025-09-14 21:12:12.676182 - ERRORTraceback (most recent call last):
-  File "c:\Users\Brandon\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 2609, in Get_buyPrice_from_DB
-    buyPrice = lastTradingRow[15]
-               ~~~~~~~~~~~~~~^^^^
-IndexError: string index out of range
-
