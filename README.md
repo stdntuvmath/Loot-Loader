@@ -2,12 +2,12 @@
 
 ## Overview
 
-**Loot-Loader** is a **market data ingestion, analysis, and execution framework** for equities, designed to operate using **long-term structural context** combined with **short- and mid-term market signals**.
+**Loot-Loader** is a stock equity trading program for equities, designed to operate using minute historical data to calculate necessary indicators for trading.
 
 The system supports **automated equity trades at market price** under tightly controlled conditions.
 
 Loot-Loader is published as a **reference implementation**.  
-It is **not a turnkey trading product** and is **not runnable without private infrastructure, credentials, and configuration**.
+This repo is **not a turnkey trading product** and is **not runnable without private infrastructure, credentials, and configuration**.
 
 ---
 
@@ -19,6 +19,7 @@ It is **not a turnkey trading product** and is **not runnable without private in
   - Volatility-normalized statistical bands
   - High–Low Equilibrium Value (HLEV) structures
 - Maintains a **time-consistent historical database**
+- Accounts for historical EOD data reconciliation
 - Evaluates symbols using **weighted signal logic**
 - Generates explainable BUY / SELL / HOLD decisions
 - **Executes equity trades at market price** when all conditions are met
@@ -36,7 +37,7 @@ Loot-Loader includes **equity execution logic**, but execution is:
 - Governed by **risk and capital constraints**
 - Not exposed as a reusable or distributable interface
 
-This repository does **not** provide a “plug-and-play” trading system.
+This repository does **not** provide a “plug-and-play” trading system. It requires a brokerage account with Charles Schwab as well as application registery. 
 
 ---
 
@@ -50,19 +51,30 @@ This repository does **not** provide a “plug-and-play” trading system.
 
 ---
 
-## Relationship to LLLongTerm
+## Technology Stack
 
-Loot-Loader integrates insights derived from **LLLongTerm**, a separate research module focused on long-horizon market structure.
+schwab-py wrapper
+LLLib_Charles_Schwab wrapper (proprietary and not included in this repo)
+os
+json
+datetime
+time
+traceback
 
-- **LLLongTerm** answers:  
-  *“Where are we in the 20–25 year market structure?”*
-
-- **Loot-Loader** answers:  
-  *“Given current conditions, should an equity trade be executed now?”*
-
-The systems are intentionally separated to preserve clarity, safety, and modularity.
 
 ---
+## Example Output
 
-## Architecture (High Level)
+The script produces:
+- Console output showing each stocks last date of entry and then indicates filling of data to present. 
+- The current status of the stock listed.
+- True or False indication of whether the indicator comparisons have been met for the stocks particular status.
 
+### Console / Printable Output
+
+![LootLoader Example Output](images/console1.JPG)
+
+
+These visualizations are intended to support **research and interpretation**, not automated decision-making.
+
+---
