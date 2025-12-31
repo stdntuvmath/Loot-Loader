@@ -1,0 +1,49 @@
+10:50 Anonymous so far: Hello and good morning. I have been doing some research and I am trying to understand some thinkscript I have and was wondering if you can help me understand. The chart doesn't seem to line up with what I would expect this thinkscript to do.
+
+def dailyClose = close(period=aggregationPeriod.DAY);
+#def dailyClose = close();
+plot highest_Month = highest(dailyClose,30);
+highest_Month.setDefaultColor(Color.White);
+
+My question is, looking at the chart for ARBB, on 11/06/2024,  why does the "highest_Month" plot go below the highest bar point, for that 24 hour period?
+10:50 admin: Thank you for chatting with us. We appreciate your patience as the next available associate will be with you as soon as possible.
+10:50 Luke_N: Hello, my name is Luke and I will be assisting you. Let me take a look. One moment.
+10:50 Anonymous so far: thank you and take your time
+10:53 Luke_N:  
+This is what I see when I add that study to a chart. With it plotting the close value that would be the reasoning for it. If you hover over that candle you will see the study value for that script comes out the same value as that dailyclose.  
+10:55 Luke_N: Are you wanting it to draw a straight line across at the highest the stock has gotten in the last 30 trading days?
+10:56 Anonymous so far: This is what I see:
+ 
+10:57 Anonymous so far: Let me say that this is doing EXACTLY what I want it to I just don't quite understand what its doing
+10:57 Luke_N: Looks like you are on a 1 day 1 minute timeframe let me adjust it to that timeframe I was on 1 year 1 day.
+10:57 Anonymous so far: oh yes of course
+10:58 Anonymous so far: I would think it would do what your study did and catch the highest point in that day
+10:58 Anonymous so far: but its not and I need to know why
+10:59 Luke_N: You are having it plot the close which not the high.
+11:00 Luke_N: def dailyClose = close(period=aggregationPeriod.DAY);
+#def dailyClose = close();
+
+The close would be tied to where the stock stops trading at 3:00 pm cst.
+11:01 Anonymous so far: trying to absorb that. I have it set to look at 30 24 hour periods
+11:01 Anonymous so far: go ahead
+11:01 Luke_N: def dailyHigh = high(period=aggregationPeriod.DAY);
+#def dailyHigh = high();
+plot highest_Month = highest(dailyHigh,30);
+highest_Month.setDefaultColor(Color.White);
+11:01 Luke_N: The close does not represent the high of the day.
+11:01 Luke_N: If you want the line at high of the day you need to use high not close
+11:02 Luke_N: Close would be tied to current price while market is open and then at 3:00 pm cst it will stop moving and be tied to the stock clsoe price.
+11:03 Anonymous so far: so what is the high(close(period=aggregationPeriod.DAY)) mean? This is what I want to do I just am trying to understand it fully as I dind'
+11:03 Anonymous so far: didn't realize this was what I wanted till I saw it
+11:03 Anonymous so far: is it finding the highest close price in a 24 hour period?
+11:04 Luke_N: The script you provided at the start of the char is plotting the close value esentially when you look back at 11/06.
+11:04 Luke_N: chat*
+11:04 Luke_N: The one I adjusted and provided back to you is plotting the hgh.
+11:05 Anonymous so far: ohhhhhh I seeeeee now. Its only providing the last bar of the day
+11:05 Luke_N: Right the close price.
+11:06 Anonymous so far: ahhhhh I gotcha! Thank you sooooo much Luke!
+11:06 Luke_N: Of course anytime and was there anything else I can help out with?
+11:06 Anonymous so far: I will now code this in python on my end
+11:06 Anonymous so far: nope I'm good now
+11:07 Luke_N: Sounds good and you can use our eduation > learning center for help with the scripting. Let us know if anything else comes up. Have a good one!
+11:07 Anonymous so far: you too bud

@@ -1,0 +1,60 @@
+{
+    "securitiesAccount": {
+        "type": "CASH",
+        "accountNumbef": "71472411",
+        "roundTrips": 0,
+        "isDayTradef": false,
+        "isClosingOnlyRestricted": false,
+        "pfcbFlag": false,
+        "initialBalances": {
+            "accruedInterest": 0.0,
+            "cashAvailableForTrading": 2256.12,
+            "cashAvailableForWithdrawal": 2256.12,
+            "cashBalance": 2256.12,
+            "bondValue": 0.0,
+            "cashReceipts": 0.0,
+            "liquidationValue": 2256.12,
+            "longOptionMarketValue": 0.0,
+            "longStockValue": 0.0,
+            "moneyMarketFund": 0.0,
+            "mutualFundValue": 2256.12,
+            "shortOptionMarketValue": 0.0,
+            "shortStockValue": 0.0,
+            "isInCall": false,
+            "unsettledCash": 0.0,
+            "cashDebitCallValue": 0.0,
+            "pendingDeposits": 0.0,
+            "accountValue": 2256.12
+        },
+        "currentBalances": {
+            "accruedInterest": 0.0,
+            "cashBalance": 478.03,
+            "cashReceipts": 0.0,
+            "longOptionMarketValue": 0.0,
+            "liquidationValue": 2250.78,
+            "longMarketValue": 1772.75,
+            "moneyMarketFund": 0.0,
+            "savings": 0.0,
+            "shortMarketValue": 0.0,
+            "pendingDeposits": 0.0,
+            "mutualFundValue": 0.0,
+            "bondValue": 0.0,
+            "shortOptionMarketValue": 0.0,
+            "cashAvailableForTrading": 478.03,
+            "cashAvailableForWithdrawal": 478.03,
+            "cashCall": 0.0,
+            "longNonMarginableMarketValue": 478.03,
+            "totalCash": 478.03,
+            "cashDebitCallValue": 0.0,
+            "unsettledCash": 0.0
+        },
+        "projectedBalances": {
+            "cashAvailableForTrading": 478.03,
+            "cashAvailableForWithdrawal": 478.03
+        }
+    },
+    "aggregatedBalance": {
+        "currentLiquidationValue": 2250.78,
+        "liquidationValue": 2250.78
+    }
+}

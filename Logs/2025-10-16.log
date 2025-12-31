@@ -1,0 +1,645 @@
+[34m*******************[34m*******************Thursday - 2025-10-16 08:36:05.900116 - ERRORTraceback (most recent call last):
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3307' (10061)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3307' (10061)
+[34m*******************[34m*******************Thursday - 2025-10-16 08:36:05.900116 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1650, in Create_Symbol_Table_for_All_Symbols
+    mycursor = connection.cursor()
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+[34m*******************[34m*******************Thursday - 2025-10-16 08:39:38.576623 - ERRORTraceback (most recent call last):
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 327, in execute
+    raise ProgrammingError
+mysql.connector.errors.ProgrammingError: Unknown error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1714, in Create_Symbol_Table_for_All_Symbols
+    mycursor.execute('INSERT INTO symbols(symbol) VALUES (\'{}\');'.format(symbol))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 329, in execute
+    raise ProgrammingError("Cursor is not connected", 2055) from err
+mysql.connector.errors.ProgrammingError: 2055: Cursor is not connected
+[34m*******************[34m*******************Thursday - 2025-10-16 08:43:44.140074 - ERRORTraceback (most recent call last):
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 327, in execute
+    raise ProgrammingError
+mysql.connector.errors.ProgrammingError: Unknown error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1714, in Create_Symbol_Table_for_All_Symbols
+    mycursor.execute('INSERT INTO symbols(symbol) VALUES (\'{}\');'.format(symbol))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 329, in execute
+    raise ProgrammingError("Cursor is not connected", 2055) from err
+mysql.connector.errors.ProgrammingError: 2055: Cursor is not connected
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.171509 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.686204 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.698204 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3070, in Check_If_Table_Exists_in_LLDB
+    connection = Database_Management.Create_My_Connection()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1411, in connect
+    self._post_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1352, in _post_connection
+    self.autocommit = self._autocommit
+    ^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 227, in autocommit
+    self._cmysql.autocommit(value)
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.719693 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.767086 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.799186 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.835635 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.866949 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.902121 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.924777 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.940404 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3070, in Check_If_Table_Exists_in_LLDB
+    connection = Database_Management.Create_My_Connection()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:13.973166 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.015321 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.033978 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.073236 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.104488 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.135736 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.151363 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3070, in Check_If_Table_Exists_in_LLDB
+    connection = Database_Management.Create_My_Connection()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.189133 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.227501 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.252636 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.289402 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.322237 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.337859 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3070, in Check_If_Table_Exists_in_LLDB
+    connection = Database_Management.Create_My_Connection()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.374000 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.400758 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.444939 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.482483 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.492289 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3070, in Check_If_Table_Exists_in_LLDB
+    connection = Database_Management.Create_My_Connection()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.528082 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.549732 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.589999 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.621248 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.636876 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3070, in Check_If_Table_Exists_in_LLDB
+    connection = Database_Management.Create_My_Connection()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.674634 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.705886 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.746267 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.774932 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.806184 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.821988 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 3079, in Check_If_Table_Exists_in_LLDB
+    mycursor.execute("SHOW TABLES LIKE \'{}\';".format(tableName))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 333, in execute
+    self.reset()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 152, in reset
+    self._connection.free_result()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 570, in free_result
+    self._cmysql.free_result()
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 08:53:14.905045 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1952, in Create_TradingTables_for_All_Symbols
+    mycursor.execute('CREATE TABLE {}_Trading(Symbol nchar(4), nDate date, nTime time(0), accountBalance float, lookingForBuy int, AlreadyBought int, lookingForSell int, AlreadySold int,  orderType nchar(4), ClosePrice float, numberOfShares int, Risk float, Profit_Loss float, ROI float, incomeTaxesDue float, buyPrice float, sellPrice float, Good_Bad_Trade nchar(4), order_ID nchar(60), rowID int);'.format(symbol))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 357, in execute
+    result = self._connection.cmd_query(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 705, in cmd_query
+    self._cmysql.query(
+KeyboardInterrupt
+[34m*******************[34m*******************Thursday - 2025-10-16 09:12:39.923543 - ERRORTraceback (most recent call last):
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown database 'lootloaderdatabase'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1049 (42000): Unknown database 'lootloaderdatabase'
+[34m*******************[34m*******************Thursday - 2025-10-16 09:12:39.923543 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1622, in Create_LootLoaderDatabase_and_All_Necessary_Tables
+    mycursor = connection.cursor()
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+[34m*******************[34m*******************Thursday - 2025-10-16 09:13:00.259038 - ERRORTraceback (most recent call last):
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown database 'lootloaderdatabase'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1049 (42000): Unknown database 'lootloaderdatabase'
+[34m*******************[34m*******************Thursday - 2025-10-16 09:13:00.259038 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1622, in Create_LootLoaderDatabase_and_All_Necessary_Tables
+    mycursor = connection.cursor()
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+[34m*******************[34m*******************Thursday - 2025-10-16 09:43:53.748832 - ERRORTraceback (most recent call last):
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 327, in execute
+    raise ProgrammingError
+mysql.connector.errors.ProgrammingError: Unknown error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1736, in Create_Symbol_Table_for_All_Symbols
+    mycursor.execute('INSERT INTO symbols(symbol) VALUES (\'{}\');'.format(symbol))
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\cursor_cext.py", line 329, in execute
+    raise ProgrammingError("Cursor is not connected", 2055) from err
+mysql.connector.errors.ProgrammingError: 2055: Cursor is not connected
+[34m*******************[34m*******************Thursday - 2025-10-16 09:51:08.867007 - ERRORTraceback (most recent call last):
+  File "c:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab.py", line 1657, in Create_LootLoaderDatabase_and_All_Necessary_Tables
+    Database_Management.Create_Delete_Tables.Create_Tables().Create_TradingTables_for_All_Symbols()
+TypeError: Database_Management.Create_Delete_Tables.Create_Tables.Create_TradingTables_for_All_Symbols() takes 0 positional arguments but 1 was given
+

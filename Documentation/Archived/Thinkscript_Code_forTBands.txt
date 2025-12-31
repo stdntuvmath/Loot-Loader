@@ -1,0 +1,379 @@
+declare lower;
+
+def sma200 = MovAvgExponential(close, 200, 0);
+#def ema3900 = MovAvgExponential(close, 3900,0);
+def ema78000 = MovAvgExponential(close, 78000, 0);
+
+
+def aTanOfsma200 = ATan((sma200[0] - sma200[1]) * 180 / 3.14159);
+def aTanOfema78000 = ATan((ema78000[0] - ema78000[1]) * 180 / 3.14159)*sqrt(3)*1000;
+def avgOfAngle200 = MovAvgExponential(aTanOfsma200, 200, 0);
+def secondsRemainingInDay = SecondsTillTime(1600);
+def minutesRemainingInDay = secondsRemainingInDay / 60;
+def hoursRemainingInDay = minutesRemainingInDay / 60;
+#def linRegTrendLine = LinearRegTrendline(close);
+#def middle = Median(aTanOfsma200, 200);
+
+
+
+
+#plot angleOf_LinRegTL = ATan(linRegTrendLine[0]-linRegTrendLine[1]*180/3.14159);
+
+#angleOf_LinRegTL.SetDefaultColor(Color.CYAN);
+
+#plot variance = 10*StandardDeviation(aTanOfsma200, 120)* StandardDeviation(aTanOfsma200, 120);
+
+#plot ema3900AngleMagnified= 10*ATan((ema3900[0]-ema3900[1]) * 180 / 3.14159);
+
+#plot ema78000AngleMagnified= 10*ATan((ema78000[0]-ema78000[1]) * 180 / 3.14159);
+
+plot origin = 0;
+
+plot angleOfSma200 = aTanOfsma200;
+#plot sumOfAngles = sum(aTanOfsma200);
+#plot angleOfema78000 = aTanOfema78000;
+
+#plot avgOfAngle = avgOfAngle200;
+
+#plot middleAngle = middle;
+
+#plot middleCrossOrigin = middleAngle crosses above origin;
+#plot middleCrossOriginDown = middleAngle crosses below origin;
+
+#plot standardDeviationOfSMA200Angle_01 = 0.01 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle_25 = 0.25 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle_5 = 0.5 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle_75 = 0.75 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle1 = StandardDeviation(aTanOfsma200, 120);
+
+#plot stDevAvg =MovAvgExponential(standardDeviationOfSMA200Angle1, 200);
+#plot standardDeviationOfSMA200Angle1_25 = 1.25 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle1_5 = 1.5 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle1_75 = 1.75 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle2 = 2 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle2_25 = 2.25 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle2_5 = 2.5 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle2_75 = 2.75 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle3 = 3 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle3_25 = 3.25 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle3_5 = 3.5 * StandardDeviation(aTanOfsma200, 120);
+
+#plot standardDeviationOfSMA200Angle3_75 = 3.75 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle4 = 4 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle5 = 5 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle6 = 6 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle7 = 7 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle8 = 8 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle9 = 9 * StandardDeviation(aTanOfsma200, 120);
+
+plot standardDeviationOfSMA200Angle10 = 10 * StandardDeviation(aTanOfsma200, 120);
+
+plot Neg1standardDeviationOfSMA200Angle1 = 0 - StandardDeviation(aTanOfsma200, 120);
+
+plot Neg2standardDeviationOfSMA200Angle2 = 0 - 2 * StandardDeviation(aTanOfsma200, 120);
+
+plot Neg3standardDeviationOfSMA200Angle3 = 0 - 3 * StandardDeviation(aTanOfsma200, 120);
+
+plot Neg4standardDeviationOfSMA200Angle4 = 0 - 4 * StandardDeviation(aTanOfsma200, 120);
+
+plot Neg5standardDeviationOfSMA200Angle5 = 0 - 5 * StandardDeviation(aTanOfsma200, 120);
+
+plot Neg6standardDeviationOfSMA200Angle6 = 0 - 6 * StandardDeviation(aTanOfsma200, 120);
+
+plot Neg7standardDeviationOfSMA200Angle7 = 0 - 7 * StandardDeviation(aTanOfsma200, 120);
+
+plot Neg8standardDeviationOfSMA200Angle8 = 0 - 8 * StandardDeviation(aTanOfsma200, 120);
+
+plot Neg9standardDeviationOfSMA200Angle9 = 0 - 9 * StandardDeviation(aTanOfsma200, 120);
+
+plot Neg10standardDeviationOfSMA200Angle10 = 0 - 10 * StandardDeviation(aTanOfsma200, 120);
+
+def changeInStdDev = standardDeviationOfSMA200Angle10[0] - standardDeviationOfSMA200Angle10[1];
+
+
+
+
+
+#_-_-_-_-_-_-_-_-_-_-_-_ BUYIN
+
+plot lookingForBuy = angleOfSma200 crosses below neg6standardDeviationOfSMA200Angle6;
+
+#plot buyIn = angleOfSma200 crosses above neg6standardDeviationOfSMA200Angle6
+plot buyIn = angleOfSma200 crosses above neg3standardDeviationOfSMA200Angle3;
+
+
+#or
+
+
+#sma200 > angleOfSma200 crosses above neg2standardDeviationOfSMA200Angle2 and close[3] < close and close[6] < close and close[9] < close
+
+#close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle_5 and close[3] > close and close[6] > close and close[9] > close and secondsRemainingInDay > 1800
+
+#or
+
+
+#close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle_75 and close[3] > close and close[6] > close and close[9] > close and secondsRemainingInDay > 1800 # and changeInStdDev > 0
+
+#or
+
+#plot buyIn =  close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle1 and close[-3] > close and close[-6] > close and close[-9] > close and secondsRemainingInDay > 1800 # and changeInStdDev > 0
+
+#or
+
+#close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle1_25 and close[3] > close and close[6] > close and close[9] > close and secondsRemainingInDay > 1800 # and changeInStdDev > 0
+
+
+#or
+
+#close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle1_75 and close[3]<close[0] and close[6]<close[0] and close[9]<close[0] and close > sma200 and secondsRemainingInDay > 1800 #
+
+#or
+
+#close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle1_75 and close[3]>close[0] and close[6]>close[0] and close[9]>close[0] and close > sma200 and secondsRemainingInDay > 1800; # and changeInStdDev > 0;
+
+
+
+#or
+
+#close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle2 and close[-3]>close[0] and close[-6]>close[0] and close[-9]>close[0] and close > sma200 and secondsRemainingInDay > 1800; # and changeInStdDev > 0;
+
+#or
+
+#close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle2_75 and close[3]>close[0] and close[6]>close[0] and close[9]>close[0] and close > sma200 and secondsRemainingInDay > 1800  and changeInStdDev > 0
+
+#or
+
+#close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle3 and close[-3] >close[0] and close[-6]> close[0] and close[-9] > close[0] and secondsRemainingInDay > 1800  and changeInStdDev > 0
+
+#or
+
+#close > sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle3_75 and close[-3] >close[0] and close[-6]> close[0] and close[-9] > close[0] and secondsRemainingInDay > 1800  and changeInStdDev > 0;
+
+
+#plot experiment1 = angleOfSma200 crosses above origin and sma200 < sma200[5] and sma200 < sma200[10]and sma200 < sma200[15];
+
+;
+
+
+#----------------------------------------------
+#----------------------------------------------
+#----------------------------------------------
+#----------------------------------------------SELLOUT
+
+
+
+#changeInStdDev < 0 (bubble is getting smaller)
+
+#plot sellOut = secondsRemainingInDay < 120
+
+#or 
+
+#angleOfSma200 crosses below origin
+
+#or
+
+plot sellOut = angleOfSma200 crosses below standardDeviationOfSMA200Angle5; 
+
+#or 
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle8 
+#or 
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle7 
+#or 
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle6 
+#or 
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle5 
+#or 
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle4 
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle3_5 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev < 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle2_25
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle1_75 
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle2_75 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0]# and changeInStdDev < 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle2_5 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0]# and changeInStdDev < 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle2 
+
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle1_25
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle_75 
+
+
+
+
+#---------------------------------------------
+#---------------------------------------------
+#---------------------------------------------
+#---------------------------------------------
+#changeInStdDev > 0 (bubble is getting bigger)
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle1_75 and changeInStdDev > 0 #and close[3] < close[0] and close[6] < close[0] and close[9] < close[0]
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle1_5 and changeInStdDev > 0 #and close[3] < close[0] and close[6] < close[0] and close[9] < close[0]
+
+
+#or
+
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle_75 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev < 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle3_5 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev > 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle3_75 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev > 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle3 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev > 0
+
+#or
+
+#angleOfSma200 crosses above standardDeviationOfSMA200Angle5# and close[3] < close[0] and close[6] < close[0] and close[9] < close[0]# and changeInStdDev > 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses above standardDeviationOfSMA200Angle10# and close[3] < close[0] and close[6] < close[0] and close[9] < close[0]# and changeInStdDev > 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle2_5 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev > 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle2 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev > 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle1_75 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev > 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle1 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev > 0
+
+#or
+
+#close >= sma200 and angleOfSma200 crosses below standardDeviationOfSMA200Angle_75 and close[3] < close[0] and close[6] < close[0] and close[9] < close[0] and changeInStdDev > 0
+
+#or
+
+#sma198 crosses above sma200
+
+#or
+
+#close crosses below sma200
+
+#or
+
+#secondsRemainingInDay <= 180
+
+
+#;
+
+
+#-------------------------------BAND COLORS
+#-------------------------------BAND COLORS
+#-------------------------------BAND COLORS
+#-------------------------------BAND COLORS
+
+
+
+origin.SetDefaultColor(Color.BLUE);
+angleOfSma200.SetDefaultColor(Color.WHITE);
+#angleOfema78000.SetDefaultColor(Color.PINK);
+#avgOfAngle.SetDefaultColor(Color.CYAN);
+#middleAngle.SetDefaultColor(Color.CYAN);
+#standardDeviationOfSMA200Angle_25.SetDefaultColor(Color.LIGHT_GRAY);
+#standardDeviationOfSMA200Angle_5.SetDefaultColor(Color.LIGHT_GRAY);
+#standardDeviationOfSMA200Angle_75.SetDefaultColor(Color.LIGHT_GRAY);
+standardDeviationOfSMA200Angle1.SetDefaultColor(Color.DARK_RED);
+#standardDeviationOfSMA200Angle1_25.SetDefaultColor(Color.LIGHT_GRAY);
+#standardDeviationOfSMA200Angle1_5.SetDefaultColor(Color.LIGHT_GRAY);
+#standardDeviationOfSMA200Angle1_75.SetDefaultColor(Color.LIGHT_GRAY);
+standardDeviationOfSMA200Angle2.SetDefaultColor(Color.RED);
+#standardDeviationOfSMA200Angle2_25.SetDefaultColor(Color.LIGHT_GRAY);
+#standardDeviationOfSMA200Angle2_5.SetDefaultColor(Color.LIGHT_GRAY);
+#standardDeviationOfSMA200Angle2_75.SetDefaultColor(Color.LIGHT_GRAY);
+standardDeviationOfSMA200Angle3.SetDefaultColor(Color.LIGHT_RED);
+#standardDeviationOfSMA200Angle3_25.SetDefaultColor(Color.LIGHT_GRAY);
+#standardDeviationOfSMA200Angle3_5.SetDefaultColor(Color.LIGHT_GRAY);
+#standardDeviationOfSMA200Angle3_75.SetDefaultColor(Color.LIGHT_GRAY);
+standardDeviationOfSMA200Angle4.SetDefaultColor(Color.DARK_ORANGE);
+standardDeviationOfSMA200Angle5.SetDefaultColor(Color.LIGHT_ORANGE);
+standardDeviationOfSMA200Angle6.SetDefaultColor(Color.ORANGE);
+standardDeviationOfSMA200Angle7.SetDefaultColor(Color.YELLOW);
+standardDeviationOfSMA200Angle8.SetDefaultColor(Color.LIME);
+standardDeviationOfSMA200Angle9.SetDefaultColor(Color.GREEN);
+standardDeviationOfSMA200Angle10.SetDefaultColor(Color.LIGHT_GREEN);
+#ema3900AngleMagnified.SetDefaultColor(Color.CYAN);
+
+
+Neg1standardDeviationOfSMA200Angle1.SetDefaultColor(Color.DARK_RED);
+Neg2standardDeviationOfSMA200Angle2.SetDefaultColor(Color.RED);
+Neg3standardDeviationOfSMA200Angle3.SetDefaultColor(Color.LIGHT_RED);
+Neg4standardDeviationOfSMA200Angle4.SetDefaultColor(Color.DARK_ORANGE);
+Neg5standardDeviationOfSMA200Angle5.SetDefaultColor(Color.LIGHT_ORANGE);
+Neg6standardDeviationOfSMA200Angle6.SetDefaultColor(Color.ORANGE);
+Neg7standardDeviationOfSMA200Angle7.SetDefaultColor(Color.YELLOW);
+Neg8standardDeviationOfSMA200Angle8.SetDefaultColor(Color.LIME);
+Neg9standardDeviationOfSMA200Angle9.SetDefaultColor(Color.GREEN);
+Neg10standardDeviationOfSMA200Angle10.SetDefaultColor(Color.LIGHT_GREEN);
+#middleCrossOrigin.SetDefaultColor(Color.Magenta);
+buyIn.SetDefaultColor(Color.CYAN);
+sellOut.SetDefaultColor(Color.MAGENTA);
+#StDevAvg.SetDefaultColor(Color.CYAN);
+lookingForBuy.SetDefaultColor(Color.OrANGE);
+#experiment1.SetDefaultColor(Color.Yellow);
+#anglOfSma6.setDefaultColor(Color.Green);
+#NegThresholdstandardDeviationOfSMA6Angle.setDefaultColor(Color.LIGHT_GREEN);
+#ThresholdstandardDeviationOfSMA6Angle.setDefaultColor(Color.LIGHT_GREEN);
+#Threshold1_5standardDeviationOfSMA6Angle.setDefaultColor(Color.LIME);

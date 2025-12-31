@@ -1,0 +1,240 @@
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-| PROFILE CREATION |-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Beginning Notes:
+
+If the amount of bits in a binary number is between 4 and 7, that binary number is called a nibble.
+If the amount of bits in a binary number is equal to 8, that binary number is called a byte.
+If the amount of bits in a binary number are greater than 8, that binary number is called a word.
+Most significant bit (MSB) is the left most bit in whatever amount of bits your referring to.
+Least significant bit (LSB) is the right most bit in whatever amount of bits your referring to.
+
+
+*** Summary ***
+
+It was found that, in order to work properly, the Turner Bands must be tailored to each stock rather than running
+each stock through one single version of the Turner Bands as was previously used. With this in mind, a binary system was 
+made so that the Turner Bands can respond to each stock dynamically by applying a binary profile to to each stock. The profiles 
+are passed into the RunTBands() method as arrays. The profile houses the data which represents how a specific trade 
+status is triggered. For example, the parameter lookingForBuy embodies the binary data capable of triggering the trade status 
+of the stock being watched which then prompts the program to begin looking for a good buy entry point. 
+Each profile holds one or more 15-bit binary numbers, each representing a trigger. 
+
+***NOTE: The first bit of the first 15-bit value must always be a 1 for the entire string 
+of numbers to be accepted.*** Below is a description of how to create a binary profile.
+
+If more knowledge is needed to understand the basics of binary numbers, 
+please visit https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:digital-information/xcae6f4a7ff015e7d:binary-numbers/v/the-binary-number-system#:~:text=Binary%20numbers%20contain%20only%20the,two%20and%20add%20the%20results.
+(Skip the video to 2:11 to quickly get to the point!!)
+
+
+
+
+
+*** Entry Bit ***
+
+The MSB (Most significant bit) of the binary profile is the Entry bit. The
+Entry bit MUST ALWAYS be a one. This allows for the python compiler to read 
+the string of numbers as a binary number.
+
+
+
+*** Conversion Bit ***
+
+The conversion bit, when activated by a one, will override the "cross bit" with its greaterthenEqualto/lessthenEqualto function, which is 
+in-turn, toggled by the logical operator bit.
+
+
+
+If the conversion bit is a one, it toggles the logical operator bit on and the cross bit off
+If the conversion bit is a zero, it toggles the cross bit on and the logical operator bit off
+
+
+
+
+*** Logical Operator Bit ***
+
+The logical operator bit will toggle between greaterthenEqualto/lessthenEqualto by the following:
+
+1 = greaterthanEqualto
+0 = lessthanEqualto
+
+
+
+
+*** Real Number Bit ***
+
+The fourth bit from the MSB designates whether to use a real number or not. If the real number bit
+is zero, no real number is used and a Turner band is used. If the real number bit is one, the second
+Turner band in the designated trigger is ignored and a real number is passed in its place as a parameter
+in the four section methods described below.
+
+
+
+
+*** TBand bits ***
+
+The Turner Band bits (TBand bits) are represented by a 5-bit binary number. 
+The MSB of the Turner Band bits is the sign bit described below. 
+The rest of the number is a 4-bit binary number
+
+ 
+TurnerBand         nibble        TBand represented
+
+origin             00000              0
+
+stdDev1            00001              1
+stdDev2            00010              2
+stdDev3            00011              3
+stdDev4            00100              4
+stdDev5            00101              5
+stdDev6            00110              6
+stdDev7            00111              7
+stdDev8            01000              8
+stdDev9            01001              9
+stdDev10           01010             10
+
+negstdDev1         10001             -1
+negstdDev2         10010             -2
+negstdDev3         10011             -3
+negstdDev4         10100             -4
+negstdDev5         10101             -5
+negstdDev6         10110             -6
+negstdDev7         10111             -7
+negstdDev8         11000             -8
+negstdDev9         11001             -9
+negstdDev10        11010            -10
+
+ema200             01011             11
+emaAngle           01100             12
+stdDev10Avg        01101             13
+stdDev10Avg_half   01110             14
+
+
+
+
+*** Sign Bit ***
+
+The binary representations below use the magnitude method of distinguishing positive
+and negative binary values whereby only a single bit represents the sign of the number (sign bit). 
+This is not to be mistaken by the 2's compliment method which is completely different and not used
+in this program. Since our biggest decimal number is 14, we need to use at 
+least a 5-bit binary number with the most significant bit is the sign 
+bit (left most bit). Zero stands for positive value and one stands for a negative value. 
+
+0 = - value
+1 = + value
+
+
+
+
+
+*** Combining Bit ***
+
+The combining bit will combine two 11-bit words (triggers) together to make a 23-bit word. For example, the two words below will be
+combined to form a bigger word. A one combining bit represents an AND between the adjacent triggers. A zero combining
+bit represents an OR between adjacent triggers.
+
+
+word1 = 01010101000001 
+
+word2 = 01010101000011
+
+Entry bit        word1      combining bit         word2
+    ^              ^              ^                 ^
+    1        01010101000001       1          01010101000011 = 10101000001010101000011
+
+
+
+
+
+
+*** Cross bits ***
+
+The cross bit combines two 5-bit nibbles together.
+When the cross bit is zero, it represents crossing below the given 5-bit binary number. 
+When the cross bit is one, it represents crossing above the given 5-bit binary number.
+The combination of these will make a binary number called a "word" (9-bits or greater).
+
+
+
+
+*** Passing Multiple Triggers in One Profile ***
+
+Passing multiple triggers are necessary when you want to buy or sell in more than one way. For example,
+if a buy is triggered by more than one thing like the ema200angle crossing over negstdDev2 or the
+stdDev10 crossing under the stdDev10Avg. To pass multiple triggers in one profile, simply combine two
+words together with a single bit in between them. This bit is the combining bit. The Stock_Trading_Method
+will accomodate as many 1 or 2 trigger profiles as the user needs for any section of the trade.
+
+The four sections of a trade are:
+
+lookingForBuy
+Ok_to_Buy_
+lookingForSell
+Ok_to_Sell
+
+
+
+
+
+
+*** Profile Breakdown ***
+
+
+                                                                      |------11-bit trigger-------|                                                                                    |-------11-bit trigger------|
+ EntryBit     ConversionBit     LogicalOperatorBit     RealNumBit      TBand    crossBit     TBand        combining bit    ConversionBit     LogicalOperatorBit      RealNumBit         TBand    crossBit     TBand                                            Binary Profile
+    ^               ^                   ^                  ^           ^^^^^       ^         ^^^^^              ^              ^                   ^                     ^              ^^^^^       ^         ^^^^^                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    1               1                   1                  0           01011       0         00001              1              1                   1                     0              01100       1         10100           =                         111001011000001011001100110100
+                    ^                   ^                  ^           ^^^^^       ^         ^^^^^              ^              ^                   ^                     ^              ^^^^^       ^         ^^^^^
+            override crossbit    greaterthanEqualto     TBand on      ema200 crosses below stdDev1             and     override crossbit    greaterthanEqualto        TBand on         emaAngle crosses above negstdDev4                  (11 greaterthanEqualto 1) and (12 greaterthanEqualto -4)              
+
+
+
+
+
+                                                                      |------11-bit trigger-------|                                                                                    |-------11-bit trigger------|
+ EntryBit     ConversionBit     LogicalOperatorBit     RealNumBit      TBand    crossBit     TBand        combining bit    ConversionBit     LogicalOperatorBit      RealNumBit         TBand    crossBit     TBand                                            Binary Profile
+    ^               ^                   ^                  ^           ^^^^^       ^         ^^^^^              ^              ^                   ^                     ^              ^^^^^       ^         ^^^^^                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    1               0                   0                  0           10011       0         10001              0              1                   0                     0              01010       1         10111           =                         101010011010001010001010110111
+                    ^                   ^                  ^           ^^^^^       ^         ^^^^^              ^              ^                   ^                     ^              ^^^^^       ^         ^^^^^
+            allow crossbit       lessthanEqualto        TBand on      negstdDev3 crosses below negstdDev1       or     override crossbit     lessthanEqualto         TBand on      stdDev10Avg crosses above negstdDev7                    (-3 crosses below -1) or (10 lessthanEqualto -7)  
+
+
+
+
+
+What is the maximum amount of triggers I can pass into the methods?
+
+A total of two triggers can be passed for any one of the below methods at a time, but a properly placed for loop
+has enabled the passing of as many 1 or 2 by triggers as the user likes. Triggers should be loaded into
+an array of triggers and then passed into the Stock_Trading_Method(), into their appropriate parameter.
+
+
+
+Below is an example of how to load Stock_Trading_Method with data. This example is noting symbol as "A".
+The sections that are "shut off" are for future use when we figure out how to apply options to this 
+strategy. For now we leave them shutoff.
+
+
+lookingForBuyEntryProfArray = [100001100010101]                 #[[12, -5], ['crosses below'], []]                   
+okToBuyEntryProfArray = [100001100110011110001101001000, 110001010001100100001100100101, 111001101001010100001100100110]        #[[12, -3, 13, 8], ['crosses above', 'lessthanEqualto'], ['and']]    or     [[10, 12, 12, 5], ['lessthanEqualto', 'crosses above'], ['and']]    or    [[13, 10, 12, 6], ['greaterthanEqualto', 'crosses above'], ['and']]
+lookingForSellExitProfArray = [111001101001010100001100100011]  #[[13, 10, 12, 3], ['greaterthanEqualto', 'crosses above'], ['and']]
+okToSellExitProfArray = [110001100000010110001101000100]        #[[12, 2, 13, 4], ['lessthanEqualto', 'lessthanEqualto'], ['and']]
+
+
+lookingForSellEntryProf = 100000000000000                #shut off
+okToSellEntryProf = 100000000000000                      #shut off
+lookingForBuyExitProf = 100000000000000                  #shut off
+oktoBuyExitProf = 100000000000000                        #shut off
+
+
+
+AM.Logic.Stock_Trading_Method("A", lookingForBuyEntryProfArray,lookingForBuyExitProf,okToBuyEntryProfArray,
+                                oktoBuyExitProf,lookingForSellEntryProf,lookingForSellExitProfArray,
+                                okToSellEntryProf,okToSellExitProfArray)
+
+
+
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

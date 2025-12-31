@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html lang="en">    
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LootLoader Status</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    {% block head %}{% endblock %}
+  </head>
+  <body> 
+    
+    <py-script>
+      from pyscript import Element
+      Element("output").write("Are you sure you can????")
+    </py-script>
+    <div id="temp-output"></div>
+    {% block body %}{% endblock %}
+    
+  </body>
+</html>

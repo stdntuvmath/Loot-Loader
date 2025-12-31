@@ -1,0 +1,23 @@
+Current:
+
+We will make the UUID for LookingForBuy and LookingForSell. 
+Then, when we buy or sell, we will request the ALPACA created UUID and assign that over the one we made.
+
+
+Example of LookingForBuy or LookingForSell
+
+LKBY_A_20231228_085000_0_98746.01_v1_134
+
+
+
+
+
+
+Older:
+
+Example of a BUY and SELL UUID sent to alpaca
+
+type_symbol_date_time_price_trade_UUIDversion_UUIDnumber
+
+BUY_A_20230227_130535_35.27_MARKET_v1_1
+SELL_AMD_20230227_130535_35.27_GOOD_v1_1

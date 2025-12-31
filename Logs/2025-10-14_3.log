@@ -1,0 +1,31 @@
+[34m-------------------[34m-------------------Tuesday - 2025-10-14 06:31:03.444009 - INFO-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-06:31:03.428380 - BEGIN DATALOADER-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-[34m*******************[34m*******************Tuesday - 2025-10-14 06:31:07.563522 - ERRORTraceback (most recent call last):
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 334, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3307' (10061)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab_3.py", line 1538, in Create_My_Connection
+    mydb = mysql.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 151, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\abstracts.py", line 1399, in connect
+    self._open_connection()
+  File "C:\Users\stdnt\AppData\Local\Programs\Python\Python311\Lib\site-packages\mysql\connector\connection_cext.py", line 339, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3307' (10061)
+[34m*******************[34m*******************Tuesday - 2025-10-14 06:31:07.563522 - ERRORTraceback (most recent call last):
+  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab_3.py", line 2197, in Get_Symbol_List
+    mycursor = connection.cursor()
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+[34m*******************[34m*******************Tuesday - 2025-10-14 06:31:07.563522 - ERRORTraceback (most recent call last):
+  File "C:\Users\stdnt\Desktop\LootLoader\LootLoader_CharlesSchwab\LLLib_Charles_Schwab_3.py", line 2228, in Get_Sectioned_Symbol_List_85
+    for symbol in entireSymbolList:
+TypeError: 'NoneType' object is not iterable
+

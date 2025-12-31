@@ -1,0 +1,43 @@
+
+1. We need to erase all historical data and change the historical database to include the average of stdDev10 and the average/2
+    A. This means that DataLoader needs changed to upload the data to the changed database. -------------------------------------------COMPLETE
+    B. We need erase the current trade tables for all stocks ------------------------------------------------------------------------- COMPLETE
+    C. We need to add stdDev10Avg and stdDev10Avg/2 as columns to the new tables-------------------------------------------------------COMPLETE
+    D. We need to alter the pull and push methods that dataloader uses to accomodate stdDev10Avg and stdDev10Avg/2 --------------------COMPLETE
+2. We need to add calculations for moving average of both the average of stdDev10 and the average/2------------------------------------COMPLETE
+    A. We need to add new calculations to the calculations management file-------------------------------------------------------------COMPLETE
+3. We need to change the main file - Accountability_Management.py and RunTBands2.py to include trading logic for the new setup. This setup includes
+   utilizing the binary profiles for each stock separately and utilizing the 200-hour ema data.
+    A. LookingForBuyLogic--------------------------------------------------------------------------------------------------------------COMPLETE
+    B. BuyLogic------------------------------------------------------------------------------------------------------------------------COMPLETE
+    C. LookingForSellLogic-------------------------------------------------------------------------------------------------------------COMPLETE
+    D. SellLogic-----------------------------------------------------------------------------------------------------------------------COMPLETE
+    E. Consolidate all of the above into one main "Stock_Trading_Method()" ------------------------------------------------------------COMPLETE
+4. We need to figure out how to get the actual buyPrice from ALPACA--------------------------------------------------------------------COMPLETE
+5. We need to get the actual orderID from ALPACA---------------------------------------------------------------------------------------COMPLETE
+6. We need to update the trading tables to include LookingForSell----------------------------------------------------------------------COMPLETE
+7. We need to change the trade logic to include the actual buyPrice.-------------------------------------------------------------------COMPLETE 
+   The code to get the actual buy and sell price is done we just need
+   to pull from that new code instead of the old code. We need to create a method to reinsert a different
+   value into the buy/sell price after we have already inserted it. ------------------------------------------------------------------- NOT COMPLETE
+8. We need to change how the program recalls and stores UEIDs. Right now we are using our own version and we need to use ALPACAS.------COMPLETE
+9. We need to make the code that includes a filter for the EMA200 hour and biasing the program to react properly
+   to a longterm uptrend/downtrend. ---------------------------------------------------------------------------------------------------COMPLETE
+
+
+
+****** TESTING CAN BEGIN ******
+
+
+
+10. We need to make the backend for accounts that are below $25000.
+11. We need to make the backend that deposits winnings into the bank automatically.
+12. We need to make a GUI so that this program can be interactive
+13. We need to make that code that will take the last minute of every day of every stock and place it in the last hour of the 200-hour data because
+    Alpaca is so cheap they won't provide it.
+14. We need to be able to calculate the stopPrices for all active trades so if the internet goes out the risk is reduced
+    buy giving alpaca the control to stop the trade at the correct price threshold.
+15. We need to calculate and present the 
+
+
+
