@@ -15,7 +15,7 @@ This repo is **not a turnkey trading product** and is **not runnable without pri
 
 CAGR Lump Sum = Account growth (simple): 39.62%
 
-Cumulative Rate of Return: 30.04%
+Cumulative Rate of Return: 30.09%
 
 Time-weighted return (annualized): 13.22%
 
