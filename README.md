@@ -11,7 +11,7 @@ This repo is **not a turnkey trading product** and is **not runnable without pri
 
 ---
 
-## Performance Metrics
+## Performance Metrics Year 2025
 
 CAGR Lump Sum = Account growth (simple): 39.62%
 
